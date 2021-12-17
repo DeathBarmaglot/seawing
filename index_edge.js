@@ -1,9 +1,5 @@
-/**
- * Adobe Edge: symbol definitions
- */
 (function($, Edge, compId){
-//images folder
-var im='images/';
+var im='https://raw.githubusercontent.com/DeathBarmaglot/seawing/master/images/';
 
 var fonts = {};
 var opts = {
@@ -27,9 +23,16 @@ var symbols = {
     content: {
             dom: [
             {
+                id: 'Rectangle',
+                type: 'rect',
+                rect: ['0px', '0px','298px','178px','auto', 'auto'],
+                fill: ["rgba(255,255,255,1.00)"],
+                stroke: [1,"rgba(34,0,139,1.00)","solid"]
+            },
+            {
                 id: 'sewing-girl',
                 type: 'image',
-                rect: ['160px', '16px','140px','140px','auto', 'auto'],
+                rect: ['158px', '16px','140px','140px','auto', 'auto'],
                 fill: ["rgba(0,0,0,0)",im+"sewing-girl.jpg",'0px','0px']
             },
             {
@@ -90,10 +93,10 @@ var symbols = {
         "Base State": {
             "${_foot}": [
                 ["style", "top", '159px'],
-                ["style", "background-position", [0,0], {valueTemplate:'@@0@@px @@1@@px'} ],
+                ["style", "left", '362px'],
                 ["style", "opacity", '0'],
                 ["style", "clip", [0,200,25,0], {valueTemplate:'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'} ],
-                ["style", "left", '362px']
+                ["style", "background-position", [0,0], {valueTemplate:'@@0@@px @@1@@px'} ]
             ],
             "${_l2}": [
                 ["style", "top", '70px'],
@@ -110,11 +113,21 @@ var symbols = {
                 ["style", "opacity", '0'],
                 ["style", "left", '-178px']
             ],
+            "${_Rectangle}": [
+                ["style", "top", '0px'],
+                ["style", "border-width", '1px'],
+                ["color", "background-color", 'rgba(255,255,255,1.00)'],
+                ["color", "border-color", 'rgba(34,0,139,1.00)'],
+                ["style", "height", '178px'],
+                ["style", "border-style", 'solid'],
+                ["style", "left", '0px'],
+                ["style", "width", '298px']
+            ],
             "${_sewing-girl}": [
                 ["style", "top", '16px'],
                 ["style", "height", '140px'],
                 ["style", "opacity", '0'],
-                ["style", "left", '160px'],
+                ["style", "left", '158px'],
                 ["style", "width", '140px']
             ],
             "${_l12}": [
@@ -127,9 +140,9 @@ var symbols = {
             ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(255,255,255,1)'],
-                ["style", "width", '300px'],
+                ["style", "overflow", 'hidden'],
                 ["style", "height", '180px'],
-                ["style", "overflow", 'hidden']
+                ["style", "width", '300px']
             ],
             "${_t}": [
                 ["style", "top", '157px'],
@@ -160,19 +173,19 @@ var symbols = {
             duration: 11000,
             autoPlay: true,
             timeline: [
-                { id: "eid10", tween: [ "style", "${_l12}", "opacity", '1', { fromValue: '0'}], position: 500, duration: 600, easing: "easeInOutCubic" },
-                { id: "eid23", tween: [ "style", "${_l12}", "opacity", '0', { fromValue: '1'}], position: 3500, duration: 302, easing: "easeInOutCubic" },
-                { id: "eid37", tween: [ "style", "${_l12}", "opacity", '0', { fromValue: '0'}], position: 11000, duration: 0, easing: "easeInOutCubic" },
+                { id: "eid25", tween: [ "style", "${_foot}", "background-position", [0,-30], { valueTemplate: '@@0@@px @@1@@px', fromValue: [0,0]}], position: 5750, duration: 302, easing: "easeInOutCubic" },
                 { id: "eid19", tween: [ "style", "${_t}", "left", '26px', { fromValue: '335px'}], position: 500, duration: 435, easing: "easeInOutCubic" },
                 { id: "eid9", tween: [ "style", "${_l2}", "opacity", '1', { fromValue: '0'}], position: 3500, duration: 600, easing: "easeInOutCubic" },
                 { id: "eid24", tween: [ "style", "${_l2}", "opacity", '0', { fromValue: '1'}], position: 5960, duration: 302, easing: "easeInOutCubic" },
                 { id: "eid33", tween: [ "style", "${_l2}", "opacity", '0', { fromValue: '0'}], position: 11000, duration: 0, easing: "easeInOutCubic" },
-                { id: "eid30", tween: [ "style", "${_res}", "left", '-8px', { fromValue: '-178px'}], position: 6052, duration: 448, easing: "easeInOutCubic" },
+                { id: "eid30", tween: [ "style", "${_res}", "left", '-6px', { fromValue: '-178px'}], position: 6052, duration: 448, easing: "easeInOutCubic" },
                 { id: "eid7", tween: [ "style", "${_res}", "opacity", '1', { fromValue: '0'}], position: 6095, duration: 600, easing: "easeInOutCubic" },
                 { id: "eid39", tween: [ "style", "${_res}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" },
-                { id: "eid28", tween: [ "style", "${_sewing-girl}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 302, easing: "easeInOutCubic" },
-                { id: "eid44", tween: [ "style", "${_sewing-girl}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" },
-                { id: "eid25", tween: [ "style", "${_foot}", "background-position", [0,-30], { valueTemplate: '@@0@@px @@1@@px', fromValue: [0,0]}], position: 5750, duration: 302, easing: "easeInOutCubic" },
+                { id: "eid8", tween: [ "style", "${_foot}", "opacity", '1', { fromValue: '0'}], position: 733, duration: 302, easing: "easeInOutCubic" },
+                { id: "eid40", tween: [ "style", "${_foot}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" },
+                { id: "eid10", tween: [ "style", "${_l12}", "opacity", '1', { fromValue: '0'}], position: 500, duration: 600, easing: "easeInOutCubic" },
+                { id: "eid23", tween: [ "style", "${_l12}", "opacity", '0', { fromValue: '1'}], position: 3500, duration: 302, easing: "easeInOutCubic" },
+                { id: "eid37", tween: [ "style", "${_l12}", "opacity", '0', { fromValue: '0'}], position: 11000, duration: 0, easing: "easeInOutCubic" },
                 { id: "eid3", tween: [ "style", "${_h11}", "left", '-1px', { fromValue: '-334px'}], position: 0, duration: 1000, easing: "easeInOutCubic" },
                 { id: "eid20", tween: [ "style", "${_foot}", "left", '53px', { fromValue: '362px'}], position: 500, duration: 435, easing: "easeInOutCubic" },
                 { id: "eid11", tween: [ "style", "${_t}", "opacity", '1', { fromValue: '0'}], position: 1580, duration: 302, easing: "easeInOutCubic" },
@@ -181,10 +194,10 @@ var symbols = {
                 { id: "eid42", tween: [ "style", "${_req}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" },
                 { id: "eid5", tween: [ "style", "${_h11}", "opacity", '1', { fromValue: '0'}], position: 400, duration: 600, easing: "easeInOutCubic" },
                 { id: "eid43", tween: [ "style", "${_h11}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" },
-                { id: "eid14", tween: [ "style", "${_l12}", "clip", [0,180,139,12.25830078125], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,180,-14.75,-2.74169921875]}], position: 890, duration: 375, easing: "easeInOutCubic" },
+                { id: "eid28", tween: [ "style", "${_sewing-girl}", "opacity", '1', { fromValue: '0'}], position: 0, duration: 302, easing: "easeInOutCubic" },
+                { id: "eid44", tween: [ "style", "${_sewing-girl}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" },
                 { id: "eid27", tween: [ "style", "${_req}", "clip", [0,180,97,0], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,180,-15,0]}], position: 7295, duration: 706, easing: "easeInOutCubic" },
-                { id: "eid8", tween: [ "style", "${_foot}", "opacity", '1', { fromValue: '0'}], position: 733, duration: 302, easing: "easeInOutCubic" },
-                { id: "eid40", tween: [ "style", "${_foot}", "opacity", '0', { fromValue: '1'}], position: 10500, duration: 500, easing: "easeInOutCubic" }            ]
+                { id: "eid14", tween: [ "style", "${_l12}", "clip", [0,180,139,12.25830078125], { valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)', fromValue: [0,180,-14.75,-2.74169921875]}], position: 890, duration: 375, easing: "easeInOutCubic" }            ]
         }
     }
 }
@@ -193,9 +206,6 @@ var symbols = {
 
 Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
 
-/**
- * Adobe Edge DOM Ready Event Handler
- */
 $(window).ready(function() {
      Edge.launchComposition(compId);
 });
