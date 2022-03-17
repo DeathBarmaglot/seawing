@@ -54,7 +54,7 @@ var symbols = {
                 type: 'image',
                 rect: ['53px', '159px','200px','49px','auto', 'auto'],
                 clip: ['rect(0px 200px 25px 0px)'],
-                fill: ["rgba(0,0,0,0)",im+"foot.png",'0px','0px']
+                fill: ["rgba(0,0,0,0)",im+"_foot.png",'0px','0px']
             },
             {
                 id: 'h11',
